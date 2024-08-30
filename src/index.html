@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alireza" />
+    <!-- Links -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Books Library 📖</title>
+  </head>
+  <body>
+    <main class="library" id="library">
+      <div class="container">
+        <!-- Library Header -->
+        <div class="library__header">
+          <!-- Library search Books -->
+          <div class="library__search-container">
+            <svg class="icon">
+              <use xlink:href="/assets/icons/icons.svg#ic-search"></use>
+            </svg>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Search for books, journal articles and more..." />
+          </div>
+          <!-- Library add Books button -->
+          <button class="library__add-book-btn" id="add-book">
+            <svg class="icon">
+              <use xlink:href="/assets/icons/icons.svg#ic-plus"></use>
+            </svg>
+            <span>Add Your Book 😊</span>
+          </button>
+          <!-- UI desing by -->
+          <a id="design-by" href="https://dribbble.com/Shand_" target="_blank"
+            >UI design by: OIga Sh
+          </a>
+        </div>
+        <!-- Library Body(content) -->
+        <div class="library__content">
+          <!-- Library recommended Books -->
+          <div class="content__gruop">
+            <span class="library__title">Recommended</span>
+            <!-- Library recommended container -->
+            <div class="content__cards-container">
+              <div class="content__card">
+                <div class="card__header">
+                  <img src="/assets/images/book-1.webp" alt="Book-1" />
+                </div>
+                <div class="card__body">
+                  <span class="card__badge badge badge--success">Fiction</span>
+                  <h5 class="card__title">A Teaspon of Earth and Sea long A Teaspon of Earth and Sea long</h5>
+                  <span class="card__author">Dina Nayeri</span>
+                </div>
+              </div>
+              <div class="content__card">
+                <div class="card__header">
+                  <img src="/assets/images/book-2.webp" alt="Book-2" />
+                </div>
+                <div class="card__body">
+                  <span class="card__badge badge badge--success">Fiction</span>
+                  <p class="card__title">Here is the real Magic</p>
+                  <p class="card__author">Nate Staniforth</p>
+                </div>
+              </div>
+              <div class="content__card">
+                <div class="card__header">
+                  <img src="/assets/images/book-3.webp" alt="Book-3" />
+                </div>
+                <div class="card__body">
+                  <span class="card__badge badge badge--purple"
+                    >Biographic</span
+                  >
+                  <p class="card__title">The water Cure</p>
+                  <p class="card__author">Sophie Mackintosh</p>
+                </div>
+              </div>
+              <div class="content__card">
+                <div class="card__header">
+                  <img src="/assets/images/book-4.webp" alt="Book-4" />
+                </div>
+                <div class="card__body">
+                  <span class="card__badge badge badge--warning">Mystery</span>
+                  <p class="card__title">Sugor Run</p>
+                  <p class="card__author">Mesha Maren</p>
+                </div>
+              </div>
+              <div class="content__card">
+                <div class="card__header">
+                  <img src="/assets/images/book-5.webp" alt="Book-5" />
+                </div>
+                <div class="card__body">
+                  <span class="card__badge badge badge--warning">Mindset</span>
+                  <p class="card__title">Thinking, Fast and Slow</p>
+                  <p class="card__author">Daniel Kahneman</p>
+                </div>
+              </div>
+              <!-- Library suggested banner -->
+              <a
+                class="content__banner"
+                href="https://www.amazon.com/best-mindset-books/s?k=best+mindset+books"
+                target="_blank">
+                <img src="/assets/images/banner.webp" alt="Banner" />
+              </a>
+            </div>
+          </div>
+          <!-- Library my Books -->
+          <div class="content__gruop" id="my-books">
+            <span class="library__title">
+              My Books <span>( You don't have any Book yet! )</span>
+            </span>
+            <!-- Library my Books container -->
+            <div class="content__cards-container" id="my-books-container"></div>
+          </div>
+          <!-- Library modal -->
+          <div class="library__modal" id="modal-container">
+            <div class="modal__backdrop close-modal"></div>
+            <div id="modal">
+              <!-- Modal header -->
+              <div class="modal__header">
+                <span class="modal__close-btn close-modal">
+                  <svg class="icon">
+                    <use xlink:href="/assets/icons/icons.svg#ic-close"></use>
+                  </svg>
+                </span>
+                <h2>Add New Book 📖</h2>
+              </div>
+              <!-- Modal body -->
+              <div class="modal__body">
+                <form class="modal__form" autocomplete="off">
+                  <div class="modal__group">
+                    <label for="title">Book Title :</label>
+                    <input
+                      class="modal__title"
+                      type="text"
+                      id="title"
+                      name="fname"
+                      placeholder="The title of the Book"
+                      required />
+                  </div>
+                  <div class="modal__group">
+                    <label for="author">Book Author :</label>
+                    <input
+                      class="modal__author"
+                      type="text"
+                      name="fauthor"
+                      id="author"
+                      placeholder="Name of the author of the Book"
+                      required />
+                  </div>
+                  <div class="modal__group">
+                    <label for="nums-of-pages">No. of Pages :</label>
+                    <input
+                      class="modal__page-num"
+                      type="number"
+                      id="nums-of-pages"
+                      placeholder="Numbers of Book pages"
+                      required />
+                  </div>
+                  <div class="modal__group">
+                    <label for="image-url">Image URL :</label>
+                    <input
+                      class="modal__image-url"
+                      type="url"
+                      id="image-url"
+                      placeholder="Book image URL" />
+                  </div>
+                  <div class="modal__group">
+                    <label for="description">Description :</label>
+                    <textarea
+                      class="modal__description"
+                      name="description"
+                      id="description"
+                      placeholder="Descriptions of the Book"
+                      required
+                      rows="2"></textarea>
+                  </div>
+                  <div class="modal__group">
+                    <label for="is-read" class="modal__is-read">
+                      <div class="switch">
+                        <input type="checkbox" id="is-read" />
+                        <span class="slider round"></span>
+                      </div>
+                      Did you read this ? <span id="is-read-preview">No</span>
+                    </label>
+                  </div>
+                  <!-- Modal footer Buttons -->
+                  <div class="modal__buttons-container">
+                    <button
+                      type="submit"
+                      class="modal__confirm-btn btn btn--primary">
+                      CONFIRM
+                    </button>
+                    <button class="modal__reset-btn btn btn--ghost close-modal">
+                      RESET
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Scripts -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

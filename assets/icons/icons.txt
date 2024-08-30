@@ -1,0 +1,19 @@
+<svg class="icon">
+  <use xlink:href="/assets/icons/icons.svg#ic-chevron"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/icons/icons.svg#ic-search"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/icons/icons.svg#ic-plus"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/icons/icons.svg#ic-close"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/icons/icons.svg#ic-trash"></use>
+</svg>
