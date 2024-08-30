@@ -18,18 +18,7 @@ const modalForm = document.querySelector(".modal__form");
 const libraryTitle = document.querySelector("#my-books .library__title");
 const cardTitle = document.querySelector(".content__card .card__title");
 
-let myLibrary = [
-  {
-    id: 1,
-    title: "Think and Grow Rich Think and Grow Rich",
-    author: "Napoleon Hill",
-    NumOfpages: 320,
-    imageUrl: "https://m.media-amazon.com/images/I/61CIKpN5QjL._SY425_.jpg",
-    description:
-      "Think and Grow Rich has been called the “Granddaddy of All Motivational Literature.” It was the first book to boldly ask, “What makes a winner?”",
-    isRead: true,
-  },
-];
+let myLibrary = [];
 
 function Book({
   id,
