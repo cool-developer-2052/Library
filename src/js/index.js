@@ -2,7 +2,7 @@ const searchInput = document.querySelector("#search-input");
 const searchContainer = document.querySelector(".library__search-container");
 const modalIsReadPreview = document.querySelector("#is-read-preview");
 
-// Modal => the value of the input :
+// Modal => the value of the inputs :
 const title = document.querySelector("#title");
 const author = document.querySelector("#author");
 const numOfpages = document.querySelector("#nums-of-pages");
@@ -146,8 +146,8 @@ function displayBooks(library) {
   libraryTitle.innerHTML = `
     My Books ${
       myLibrary.length > 0
-        ? libraryLength
-        : "" || "<span>( You don't have any Book yet! )</span>"
+        ? `<span>( ${libraryLength} )</span>`
+        : "<span>( You don't have any Book yet! )</span>"
     }`;
 
   const deleteBookBtn = [...document.querySelectorAll(".card__delete")];
